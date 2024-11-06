@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tester/menu.dart';
+import 'package:tester/screens/menu.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,11 +7,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -30,8 +30,8 @@ class MyApp extends StatelessWidget {
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.indigo,
-        ).copyWith(secondary: Colors.deepPurple[900]),
+            primarySwatch: Colors.deepPurple,
+        ).copyWith(secondary: Colors.deepPurple[400]),
         useMaterial3: true,
       ),
       home: MyHomePage(),
